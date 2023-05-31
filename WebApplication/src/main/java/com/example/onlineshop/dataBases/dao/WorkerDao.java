@@ -1,8 +1,10 @@
 package com.example.onlineshop.dataBases.dao;
 
+import com.example.onlineshop.dataBases.PostgreSQL.Entity.Role;
 import com.example.onlineshop.dataBases.PostgreSQL.Entity.Worker;
 import com.example.onlineshop.dataBases.PostgreSQL.Repository.WorkerRepo;
 import com.example.onlineshop.message.request.RegistrationRequest;
+import com.example.onlineshop.message.request.UpdateRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -56,5 +58,16 @@ public class WorkerDao {
 
     public void deleteWorker(Long workerId) {
         workerRepo.deleteById(workerId);
+    }
+
+    public Worker updateWorkerInfo(UpdateRequest request){
+        Worker chosenWorker = workerRepo.findById(request.getUserId()).orElseThrow();
+        if (!request.getEmail().isEmpty())
+            chosenWorker.setEmail(request.getEmail());
+        if (!request.getPassword().isEmpty())
+            chosenWorker.setPassword((passwordEncoder.encode(request.getPassword())));
+        if (!request.getRole().isEmpty())
+            chosenWorker.setRole(Role.valueOf(request.getRole()));
+        return workerRepo.save(chosenWorker);
     }
 }
