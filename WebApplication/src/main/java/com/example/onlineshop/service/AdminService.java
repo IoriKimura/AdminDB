@@ -2,6 +2,7 @@ package com.example.onlineshop.service;
 
 import com.example.onlineshop.dataBases.dao.WorkerDao;
 import com.example.onlineshop.message.request.RegistrationRequest;
+import com.example.onlineshop.message.request.UpdateRequest;
 import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import org.apache.coyote.Response;
@@ -36,5 +37,9 @@ public class AdminService {
         }
         else
             return false;
+    }
+
+    public String updateInfo(UpdateRequest request){
+        return new Gson().toJson(workerDao.updateWorkerInfo(request));
     }
 }
