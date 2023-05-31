@@ -5,10 +5,8 @@ import com.example.onlineshop.message.request.RegistrationRequest;
 import com.example.onlineshop.message.request.UpdateRequest;
 import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
-import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
