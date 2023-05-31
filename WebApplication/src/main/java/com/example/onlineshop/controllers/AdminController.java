@@ -1,6 +1,7 @@
 package com.example.onlineshop.controllers;
 
 import com.example.onlineshop.message.request.RegistrationRequest;
+import com.example.onlineshop.message.request.UpdateRequest;
 import com.example.onlineshop.service.AdminService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -32,5 +33,10 @@ public class AdminController {
             return ResponseEntity.status(HttpStatus.CREATED).build();
         else
             return ResponseEntity.status(HttpStatus.FOUND).body("Пользователь уже существует");
+    }
+
+    @PostMapping(value = "/update")
+    public ResponseEntity<String> updateWorker(@RequestBody UpdateRequest updateRequest){
+        return ResponseEntity.status(HttpStatus.OK).body(adminService.updateInfo(updateRequest));
     }
 }
