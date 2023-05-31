@@ -1,5 +1,6 @@
 package com.example.onlineshop.dataBases.MongoDB.entity;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,6 +13,7 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 @Data
 @Getter
 @Setter
+@Builder
 public class CategoryEntity {
 
     @MongoId
