@@ -21,4 +21,9 @@ public class ManagerController {
     public ResponseEntity<String> allProducts(){
         return ResponseEntity.status(HttpStatus.OK).body(managerService.findAllProducts());
     }
+
+    @GetMapping(value = "/allCategories")
+    public ResponseEntity<String> allCategories(){
+        return ResponseEntity.status(HttpStatus.OK).body(managerService.findAllCategories());
+    }
 }
