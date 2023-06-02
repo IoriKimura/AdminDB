@@ -1,6 +1,7 @@
 package com.example.onlineshop.controllers;
 
 import com.example.onlineshop.message.request.CategoryRequest;
+import com.example.onlineshop.message.request.ProductRequest;
 import com.example.onlineshop.service.ManagerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -29,5 +30,10 @@ public class ManagerController {
     @PostMapping(value = "/addCategory")
     public ResponseEntity<String> addCategory(@RequestBody CategoryRequest categoryRequest){
         return managerService.addNewCategory(categoryRequest);
+    }
+
+    @PostMapping(value = "/addProduct")
+    public ResponseEntity<String> addProduct(@RequestBody ProductRequest productRequest){
+        return managerService.addNewProduct(productRequest);
     }
 }

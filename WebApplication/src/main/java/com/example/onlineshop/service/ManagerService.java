@@ -3,6 +3,7 @@ package com.example.onlineshop.service;
 import com.example.onlineshop.dataBases.dao.CategoryDao;
 import com.example.onlineshop.dataBases.dao.ProductDao;
 import com.example.onlineshop.message.request.CategoryRequest;
+import com.example.onlineshop.message.request.ProductRequest;
 import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -29,6 +30,15 @@ public class ManagerService {
             return ResponseEntity.status(HttpStatus.FOUND).body("Такая категория уже существует");
         else {
             categoryDao.add(request);
+            return ResponseEntity.ok().build();
+        }
+    }
+
+    public ResponseEntity<String> addNewProduct(ProductRequest request) {
+        if (productDao.isProductExist(request.getName()))
+            return ResponseEntity.status(HttpStatus.FOUND).body("Товар уже существует");
+        else{
+            productDao.add(request);
             return ResponseEntity.ok().build();
         }
     }
