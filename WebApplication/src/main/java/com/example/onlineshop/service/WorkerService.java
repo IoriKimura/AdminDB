@@ -4,6 +4,7 @@ import com.example.onlineshop.dataBases.dao.WorkerDao;
 import com.example.onlineshop.jwt.JwtService;
 import com.example.onlineshop.message.request.LoginRequest;
 import com.example.onlineshop.message.request.RegistrationRequest;
+import com.example.onlineshop.message.response.JwtResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -20,16 +21,15 @@ public class WorkerService {
     private final WorkerDao workerDao;
 
 
-    public String login (LoginRequest request){
+    public JwtResponse login (LoginRequest request){
         if(!workerDao.isUserExist(request.getEmail())){
-            throw new UsernameNotFoundException("Пользователь не найден");
+            throw new UsernameNotFoundException("User is not found");
         }
 
         if(!passwordEncoder.matches(request.getPassword(),
                 workerDao.getUserByEmail(request.getEmail()).getPassword())){
-            throw new UsernameNotFoundException("Пароль не подходит");
+            throw new UsernameNotFoundException("Password is not match");
         }
-
-        return jwtService.generateToken(workerDao.getUserByEmail(request.getEmail()));
+        return new JwtResponse(request.getEmail(), jwtService.generateToken(workerDao.getUserByEmail(request.getEmail())));
     };
 }

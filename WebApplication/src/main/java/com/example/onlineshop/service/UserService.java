@@ -20,7 +20,7 @@ public class UserService implements UserDetailsService {
             return workerRepo.findWorkerByEmail(email).orElseThrow();
         }
         catch (Exception e){
-            throw new UsernameNotFoundException("Пользователь не найден");
+            throw new UsernameNotFoundException("User is not found");
         }
     }
 }

@@ -34,10 +34,11 @@ public class SecurityConfig {
                 .sessionManagement(custom -> custom.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(customizer ->
                         customizer
-                                .requestMatchers(HttpMethod.POST,"api/auth/login/**").permitAll()
+                                .requestMatchers("api/auth/login").permitAll()
                                 .requestMatchers("api/admin/**").hasAuthority("ADMIN")
                                 .requestMatchers("api/manager/**").hasAuthority("MANAGER")
-                                .anyRequest().authenticated())
+                                .anyRequest().authenticated()
+                )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
