@@ -30,6 +30,6 @@ public class WorkerService {
                 workerDao.getUserByEmail(request.getEmail()).getPassword())){
             throw new UsernameNotFoundException("Password is not match");
         }
-        return new JwtResponse(request.getEmail(), jwtService.generateToken(workerDao.getUserByEmail(request.getEmail())));
+        return new JwtResponse(jwtService.generateToken(workerDao.getUserByEmail(request.getEmail())));
     };
 }

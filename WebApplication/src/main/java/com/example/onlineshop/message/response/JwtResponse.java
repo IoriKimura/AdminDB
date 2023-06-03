@@ -9,6 +9,5 @@ import org.springframework.format.annotation.DateTimeFormat;
 @AllArgsConstructor
 @NoArgsConstructor
 public class JwtResponse {
-    private String email;
     private String token;
 }

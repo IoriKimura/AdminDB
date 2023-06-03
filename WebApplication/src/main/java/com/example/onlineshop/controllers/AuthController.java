@@ -5,14 +5,12 @@ import com.example.onlineshop.service.WorkerService;
 import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(value = "/api/auth/")
+@CrossOrigin(value = "http://localhost:3000")
 public class AuthController {
     private final WorkerService workerService;
 
