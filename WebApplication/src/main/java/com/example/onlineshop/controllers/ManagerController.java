@@ -4,6 +4,7 @@ import com.example.onlineshop.message.request.CategoryRequest;
 import com.example.onlineshop.message.request.ProductRequest;
 import com.example.onlineshop.service.ManagerService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/api/manager/")
 @PreAuthorize("hasAuthority('MANAGER')")
 public class ManagerController {
-
+    @Autowired
     private final ManagerService managerService;
 
     @GetMapping(value = "/allProducts")

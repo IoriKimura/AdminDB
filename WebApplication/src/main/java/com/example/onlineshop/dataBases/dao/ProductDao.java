@@ -5,6 +5,7 @@ import com.example.onlineshop.dataBases.MongoDB.entity.ProductEntity;
 import com.example.onlineshop.dataBases.MongoDB.repository.ProductRepo;
 import com.example.onlineshop.message.request.ProductRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductDao {
 
+    @Autowired
     private final ProductRepo productRepo;
     public List<ProductEntity> findAll() {
         return productRepo.findAll();

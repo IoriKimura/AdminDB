@@ -4,6 +4,7 @@ import com.example.onlineshop.dataBases.MongoDB.entity.CategoryEntity;
 import com.example.onlineshop.dataBases.MongoDB.repository.CategoryRepo;
 import com.example.onlineshop.message.request.CategoryRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CategoryDao {
 
+    @Autowired
     private final CategoryRepo categoryRepo;
     public List<CategoryEntity> findAll() {
         return categoryRepo.findAll();

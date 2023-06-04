@@ -6,6 +6,7 @@ import com.example.onlineshop.dataBases.PostgreSQL.Repository.WorkerRepo;
 import com.example.onlineshop.message.request.RegistrationRequest;
 import com.example.onlineshop.message.request.UpdateRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
@@ -16,7 +17,9 @@ import java.util.List;
 @RequiredArgsConstructor
 public class WorkerDao {
 
+    @Autowired
     private final WorkerRepo workerRepo;
+    @Autowired
     private final PasswordEncoder passwordEncoder;
 
     public Worker createNewWorker(RegistrationRequest request){

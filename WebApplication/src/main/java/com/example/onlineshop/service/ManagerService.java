@@ -6,6 +6,7 @@ import com.example.onlineshop.message.request.CategoryRequest;
 import com.example.onlineshop.message.request.ProductRequest;
 import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -14,8 +15,9 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ManagerService {
 
+    @Autowired
     private final ProductDao productDao;
-
+    @Autowired
     private final CategoryDao categoryDao;
     public String findAllProducts() {
         return new Gson().toJson(productDao.findAll());

@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Main-Class: com.example.onlineshop.WebApplication
+Class-Path: logback-classic-1.4.7.jar postgresql-42.6.0.jar lombok-1.18.
+ 26.jar spring-jdbc-6.0.9.jar micrometer-observation-1.11.0.jar log4j-to
+ -slf4j-2.20.0.jar jaxb-runtime-4.0.2.jar jakarta.persistence-api-3.1.0.
+ jar jakarta.annotation-api-2.1.1.jar spring-expression-6.0.9.jar Hikari
+ CP-5.0.1.jar jjwt-impl-0.11.5.jar spring-boot-starter-data-mongodb-3.1.
+ 0.jar tomcat-embed-core-10.1.8.jar jackson-datatype-jsr310-2.15.0.jar s
+ pring-boot-starter-aop-3.1.0.jar mongodb-driver-sync-4.9.1.jar byte-bud
+ dy-1.14.4.jar jaxb-core-4.0.2.jar jboss-logging-3.5.0.Final.jar hiberna
+ te-commons-annotations-6.0.6.Final.jar jjwt-api-0.11.5.jar spring-secur
+ ity-web-6.1.0.jar hibernate-core-6.2.2.Final.jar mongodb-driver-core-4.
+ 9.1.jar spring-boot-starter-security-3.1.0.jar spring-aspects-6.0.9.jar
+  bson-record-codec-4.9.1.jar jackson-core-2.15.0.jar jackson-datatype-j
+ dk8-2.15.0.jar spring-context-6.0.9.jar classmate-1.5.1.jar spring-bean
+ s-6.0.9.jar txw2-4.0.2.jar jackson-annotations-2.15.0.jar spring-boot-d
+ evtools-3.1.0.jar tomcat-embed-websocket-10.1.8.jar spring-security-cor
+ e-6.1.0.jar jakarta.inject-api-2.0.1.jar bson-4.9.1.jar spring-data-mon
+ godb-4.1.0.jar spring-data-jpa-3.1.0.jar spring-tx-6.0.9.jar spring-web
+ -6.0.9.jar jakarta.activation-api-2.1.2.jar jakarta.transaction-api-2.0
+ .1.jar slf4j-api-2.0.7.jar gson-2.8.9.jar spring-orm-6.0.9.jar istack-c
+ ommons-runtime-4.1.1.jar spring-boot-starter-logging-3.1.0.jar spring-w
+ ebmvc-6.0.9.jar snakeyaml-1.33.jar spring-boot-starter-jdbc-3.1.0.jar j
+ ackson-module-parameter-names-2.15.0.jar jjwt-jackson-0.11.5.jar jackso
+ n-databind-2.15.0.jar jakarta.xml.bind-api-4.0.0.jar jandex-3.0.5.jar s
+ pring-jcl-6.0.9.jar spring-boot-3.1.0.jar spring-security-config-6.1.0.
+ jar spring-boot-autoconfigure-3.1.0.jar spring-security-crypto-6.1.0.ja
+ r tomcat-embed-el-10.1.8.jar checker-qual-3.31.0.jar spring-boot-starte
+ r-data-jpa-3.1.0.jar aspectjweaver-1.9.19.jar log4j-api-2.20.0.jar antl
+ r4-runtime-4.10.1.jar spring-boot-starter-tomcat-3.1.0.jar angus-activa
+ tion-2.0.0.jar logback-core-1.4.7.jar annotations-24.0.1.jar spring-dat
+ a-commons-3.1.0.jar spring-boot-starter-3.1.0.jar spring-boot-starter-j
+ son-3.1.0.jar spring-core-6.0.9.jar micrometer-commons-1.11.0.jar sprin
+ g-aop-6.0.9.jar spring-boot-starter-web-3.1.0.jar jul-to-slf4j-2.0.7.ja
+ r
+

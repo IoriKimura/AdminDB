@@ -2,6 +2,7 @@ package com.example.onlineshop.configuration;
 
 import com.example.onlineshop.service.UserService;
 import com.example.onlineshop.jwt.JwtFilter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Role;
@@ -20,6 +21,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 
+    @Autowired
     private final JwtFilter jwtFilter;
 
     public SecurityConfig(JwtFilter jwtFilter){

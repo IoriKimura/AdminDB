@@ -4,6 +4,7 @@ import com.example.onlineshop.message.request.LoginRequest;
 import com.example.onlineshop.service.WorkerService;
 import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/api/auth/")
 @CrossOrigin(value = "http://localhost:3000")
 public class AuthController {
+    @Autowired
     private final WorkerService workerService;
 
     @PostMapping(value = "/login")

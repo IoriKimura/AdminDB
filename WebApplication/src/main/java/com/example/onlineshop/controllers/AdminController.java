@@ -4,6 +4,7 @@ import com.example.onlineshop.message.request.RegistrationRequest;
 import com.example.onlineshop.message.request.UpdateRequest;
 import com.example.onlineshop.service.AdminService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @PreAuthorize("hasAuthority('ADMIN')")
 @RequestMapping(value = "/api/admin/")
 public class AdminController {
-
+    @Autowired
     private final AdminService adminService;
 
     @GetMapping(value = "/allUsers")

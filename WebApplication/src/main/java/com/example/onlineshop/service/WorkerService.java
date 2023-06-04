@@ -6,6 +6,7 @@ import com.example.onlineshop.message.request.LoginRequest;
 import com.example.onlineshop.message.request.RegistrationRequest;
 import com.example.onlineshop.message.response.JwtResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -13,11 +14,11 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class WorkerService {
-
+    @Autowired
     private final PasswordEncoder passwordEncoder;
-
+    @Autowired
     private final JwtService jwtService;
-
+    @Autowired
     private final WorkerDao workerDao;
 
 
