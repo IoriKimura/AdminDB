@@ -41,6 +41,7 @@ public class SecurityConfig {
                                 .requestMatchers("api/manager/**").hasAuthority("MANAGER")
                                 .anyRequest().authenticated()
                 )
+//                .cors(cors -> cors.disable())
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }

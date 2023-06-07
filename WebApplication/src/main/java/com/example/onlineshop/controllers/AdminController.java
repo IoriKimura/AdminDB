@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @PreAuthorize("hasAuthority('ADMIN')")
 @RequestMapping(value = "/api/admin/")
+@CrossOrigin(origins = "http://localhost:3000")
 public class AdminController {
     @Autowired
     private final AdminService adminService;

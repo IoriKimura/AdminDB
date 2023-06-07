@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RequestMapping(value = "/api/manager/")
 @PreAuthorize("hasAuthority('MANAGER')")
+@CrossOrigin(value = "http://localhost:3000")
 public class ManagerController {
     @Autowired
     private final ManagerService managerService;
